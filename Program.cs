@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using RentEasyAPI.Data;
 
 var allowReactApp = "_myReactApp";
 
@@ -18,7 +20,12 @@ builder.Services.AddCors(options =>
                                                .AllowAnyMethod();
                        });
 });
-                          
+
+builder.Services.AddDbContext<RentEasyContext>(options =>
+                  options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
