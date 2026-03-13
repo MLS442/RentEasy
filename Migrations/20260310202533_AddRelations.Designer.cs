@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RentEasyAPI.Data;
 
@@ -11,9 +12,11 @@ using RentEasyAPI.Data;
 namespace RentEasyAPI.Migrations
 {
     [DbContext(typeof(RentEasyContext))]
-    partial class RentEasyContextModelSnapshot : ModelSnapshot
+    [Migration("20260310202533_AddRelations")]
+    partial class AddRelations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,11 +27,11 @@ namespace RentEasyAPI.Migrations
 
             modelBuilder.Entity("RentEasyAPI.Models.Property", b =>
                 {
-                    b.Property<int>("PropertyId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PropertyId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .IsRequired()
@@ -43,18 +46,18 @@ namespace RentEasyAPI.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("PropertyId");
+                    b.HasKey("Id");
 
                     b.ToTable("Properties");
                 });
 
             modelBuilder.Entity("RentEasyAPI.Models.Tenant", b =>
                 {
-                    b.Property<int>("TenantId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TenantId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .IsRequired()
@@ -78,7 +81,7 @@ namespace RentEasyAPI.Migrations
                     b.Property<int>("PropertyId")
                         .HasColumnType("int");
 
-                    b.HasKey("TenantId");
+                    b.HasKey("Id");
 
                     b.HasIndex("PropertyId");
 

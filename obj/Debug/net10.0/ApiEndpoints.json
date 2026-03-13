@@ -9,7 +9,33 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[RentEasyAPI.Models.Property, RentEasyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RentEasyAPI.Models.Property, RentEasyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RentEasyAPI.Controllers.PropertiesController",
+    "Method": "PostProperty",
+    "RelativePath": "Properties",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newProperty",
+        "Type": "RentEasyAPI.Models.Property",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RentEasyAPI.Models.Property",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -29,7 +55,33 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[RentEasyAPI.Models.Tenant, RentEasyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RentEasyAPI.Models.Tenant, RentEasyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RentEasyAPI.Controllers.TenantsController",
+    "Method": "PostTenant",
+    "RelativePath": "Tenants",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newTenant",
+        "Type": "RentEasyAPI.Models.Tenant",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RentEasyAPI.Models.Tenant",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -49,7 +101,33 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[RentEasyAPI.Models.Ticket, RentEasyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RentEasyAPI.Models.Ticket, RentEasyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RentEasyAPI.Controllers.TicketsController",
+    "Method": "PostTicket",
+    "RelativePath": "Tickets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newTicket",
+        "Type": "RentEasyAPI.Models.Ticket",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RentEasyAPI.Models.Ticket",
         "MediaTypes": [
           "text/plain",
           "application/json",

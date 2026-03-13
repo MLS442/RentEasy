@@ -2,7 +2,7 @@
 {
     public class Property
     {
-        public int Id { get; set; }
+        public int PropertyId { get; set; }
 
         public string Address { get; set; }
 
@@ -10,6 +10,8 @@
 
         public int Bedrooms { get; set; }
 
-        public DateOnly LeaseEndDate { get; set; }
+        public DateOnly? LeaseEndDate { get; set; }
+
+        public ICollection<Tenant>? Tenants { get; set; }
     }
 }

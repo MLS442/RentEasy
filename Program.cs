@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using RentEasyAPI.Data;
+using System.Text.Json.Serialization;
 
 var allowReactApp = "_myReactApp";
 
@@ -21,17 +22,24 @@ builder.Services.AddCors(options =>
                        });
 });
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 builder.Services.AddDbContext<RentEasyContext>(options =>
                   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(
+    options => { options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles; });
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

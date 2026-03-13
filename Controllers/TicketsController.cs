@@ -18,10 +18,21 @@ namespace RentEasyAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Ticket>>> GetTickets() 
+        public async Task<ActionResult<IEnumerable<Ticket>>> GetTickets()
         {
             return await _context.Tickets
-                   .ToListAsync();        
+                   .Include(t => t.Tenant)
+                   .ToListAsync();
+        }
+
+        [HttpPost]
+
+        public async Task<ActionResult<Ticket>> PostTicket(Ticket newTicket)
+        {
+            _context.Add(newTicket);
+            await _context.SaveChangesAsync();
+
+            return newTicket;
         }
     }
 }
