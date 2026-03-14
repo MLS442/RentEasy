@@ -21,6 +21,7 @@ export const LandlordDashboard = ({name,tickets, fixTicket,isLoading,tenants,pro
                {tickets.map(t => (<li key= {t.ticketId}>
                 {t.ticketId}, 
                 {t.tenantId},
+                {t.tenant?.fullName},
                 {t.subject}, 
                 {t.description},
                 {t.status},   <button onClick={() => fixTicket(t.ticketId)}>Mark as fixed</button>
@@ -32,8 +33,8 @@ export const LandlordDashboard = ({name,tickets, fixTicket,isLoading,tenants,pro
            </div>
 
            <ul>
-              {tenants.map(t => (<li key= {t.id}>
-                {t.id},
+              {tenants.map(t => (<li key= {t.tenantId}>
+                {t.tenantId},
                 {t.fullName},
                 {t.address},
                 {t.email},
@@ -49,8 +50,8 @@ export const LandlordDashboard = ({name,tickets, fixTicket,isLoading,tenants,pro
            </div>
 
            <ul>
-              {properties.map(p => (<li key= {p.id}>
-                {p.id},
+              {properties.map(p => (<li key= {p.propertyId}>
+                {p.propertyId},
                 {p.address},
                 {p.price},
                 {p.bedrooms},
@@ -59,4 +60,4 @@ export const LandlordDashboard = ({name,tickets, fixTicket,isLoading,tenants,pro
            </ul>
         </>
     )
-}
+}  

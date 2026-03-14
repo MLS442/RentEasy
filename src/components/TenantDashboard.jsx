@@ -1,29 +1,53 @@
-import { useState} from 'react'
+import { useState } from 'react'
 
 
-export const TenantDashboard  = ({name,tickets,setTickets,isLoading}) => {
+export const TenantDashboard = ({ name, tickets, setTickets, isLoading }) => {
 
-    
+
     const [subject, setSubject] = useState('')
     const [description, setDescription] = useState('')
 
-    const handleAddTicket = () => { 
-        if(subject === '' || description === ''){
-           return alert("The fields should not be empty")
+    async function handleAddTicket() {
+        const url = "https://localhost:7130/Tickets"
+
+        if (subject === '' || description === '') {
+            return alert("The fields should not be empty")
         }
 
-        const newTicket = {ticketId: crypto.randomUUID(), 
-            tenantId: Date.now(), 
-            subject: subject, 
+        const newTicket = {
+            tenantId: 1,
+            subject: subject,
             description: description,
             status: "Not Fixed"
         }
 
-        setTickets([...tickets, newTicket])
-        setSubject('')
-        setDescription('')
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newTicket)
+            })
+
+            if (!response.ok) {
+                throw new Error(`Response Status: ${response.status}`)
+            }
+
+            const savedTicket = await response.json()
+            setTickets([...tickets, savedTicket])
+            setSubject('')
+            setDescription('')
+            //console.log(result)
+
+        }
+        catch {
+            console.error('failed')
+        }
+
+
     }
-    
+
     /*Fetching mockData: This method do not change the data in the state. It 
     prevents data loss if the user write while the mock data is being fetched.
     useEffect(() => {
@@ -37,10 +61,10 @@ export const TenantDashboard  = ({name,tickets,setTickets,isLoading}) => {
        }
     },[]);*/
 
-       /*this verify if the value of isLoading,
-       if its true, it will always show the loading spinner*/
-       
-       if(isLoading){
+    /*this verify if the value of isLoading,
+    if its true, it will always show the loading spinner*/
+
+    if (isLoading) {
         return (
             <div>
                 <p>Loading...</p>
@@ -51,39 +75,39 @@ export const TenantDashboard  = ({name,tickets,setTickets,isLoading}) => {
 
     return (
         <>
-           <h2>Hello {name} </h2>
+            <h2>Hello {name} </h2>
 
-           <h3>Report a problem</h3> <br />
+            <h3>Report a problem</h3> <br />
 
-           <div>
-               <input 
-               type="text"
-               value= {subject}
-               onChange={(e) => setSubject(e.target.value) }
-               placeholder='subject'
-               /> <br />
+            <div>
+                <input
+                    type="text"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
+                    placeholder='subject'
+                /> <br />
 
-               
 
-               <input 
-               type="text"
-               value= {description}
-               onChange={(e) => setDescription(e.target.value) }
-               placeholder='description'
-               />
-           </div> <br />
 
-           <button onClick={handleAddTicket}>Report</button> <br />
+                <input
+                    type="text"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    placeholder='description'
+                />
+            </div> <br />
 
-           <ul>
-               {tickets.map(t => (<li key= {t.ticketId}>
-                {t.ticketId},
-                {t.tenantId},
-                {t.subject},   
-                {t.description},
-                {t.status}
-               </li>))}
-           </ul>
+            <button onClick={handleAddTicket}>Report</button> <br />
+
+            <ul>
+                {tickets.map(t => (<li key={t.ticketId}>
+                    {t.ticketId},
+                    {t.tenantId},
+                    {t.subject},
+                    {t.description},
+                    {t.status}
+                </li>))}
+            </ul>
         </>
     )
 }
