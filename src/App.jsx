@@ -12,26 +12,71 @@ function App() {
   const landLord = "Mohamed"
   const [tickets, setTickets] = useState([])
   const [tenants, setTenants] = useState([])
-  const [properties,setProperties] = useState([])
+  const [properties, setProperties] = useState([])
 
   const [isLoading, setIsLoading] = useState(true)
 
 
+  async function handleFixTicket(ticketToUpdate) {
 
-  const handleFixTickets = (id) => {
-    setTickets(tickets.map(t => {
-      if (t.ticketId === id) {
-        const fixedTicket = { ...t, status: "Fixed" }
-        return fixedTicket
-      }
-      else {
-        return t
-      }
-    }))
+    const url = `https://localhost:7130/Tickets/${ticketToUpdate.ticketId}`
 
+    const updatedTicket = { ...ticketToUpdate, status: "Fixed" }
+
+    delete updatedTicket.tenant
+
+    try {
+      const response = await fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedTicket)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Response Status: ${response.status}`)
+      }
+
+
+      setTickets(tickets.map(t => {
+        if (t.ticketId === ticketToUpdate.ticketId) {
+          const fixedTicket = { ...t, status: "Fixed" }
+          return fixedTicket
+        }
+        else {
+          return t
+        }
+      }))
+    }
+    catch {
+      console.error('failed')
+    }
   }
 
-  /*Fecthing mockData: This method block the user from typing until data loads (The "Loading..." spinner)
+  async function deleteTicket(id) {
+    const url = `https://localhost:7130/Tickets/${id}`
+
+    try {
+      const response = await fetch(url, {
+        method: "DELETE"
+      })
+
+      if (!response.ok) {
+        throw new Error(`Response Status: ${response.status}`)
+      }
+
+      setTickets(tickets.filter(t => {
+        return t.ticketId != id
+      }))
+
+    }
+    catch {
+      console.error('failed')
+    }
+  }
+
+  /*Fecthing mockData: This method block the user from typing until data loads (The "Loading..." spienner)
   useEffect(() => {
       const timer = setTimeout(() => {
           setTickets([mockData[0]])
@@ -58,7 +103,7 @@ function App() {
         const result = await response.json()
         //console.log(result)
 
-       
+
 
         setTickets(result)
       }
@@ -114,7 +159,7 @@ function App() {
       }
     }
     getMockProperties()
-    
+
   }, []);
 
   return (
@@ -127,10 +172,11 @@ function App() {
 
       <LandlordDashboard name={landLord}
         tickets={tickets}
-        tenants= {tenants}
-        properties= {properties}
-        fixTicket={handleFixTickets}
-        isLoading={isLoading} />
+        tenants={tenants}
+        properties={properties}
+        handleFixTicket={handleFixTicket}
+        isLoading={isLoading}
+        deleteTicket={deleteTicket} />
     </>
   )
 }
