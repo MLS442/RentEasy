@@ -136,5 +136,42 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "RentEasyAPI.Controllers.TicketsController",
+    "Method": "PutTicket",
+    "RelativePath": "Tickets/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedTicket",
+        "Type": "RentEasyAPI.Models.Ticket",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentEasyAPI.Controllers.TicketsController",
+    "Method": "DeleteTicket",
+    "RelativePath": "Tickets/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

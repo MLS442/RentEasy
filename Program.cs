@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using RentEasyAPI.Data;
+using RentEasyAPI.Services;
 using System.Text.Json.Serialization;
 
 var allowReactApp = "_myReactApp";
@@ -35,6 +36,9 @@ builder.Services.AddControllers().AddJsonOptions(
     options => { options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles; });
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// ITicketService to TicketService
+builder.Services.AddScoped<ITicketService, TicketService>();
 
 var app = builder.Build();
 

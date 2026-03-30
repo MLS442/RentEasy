@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using RentEasyAPI.Data;
 using RentEasyAPI.Models;
+using RentEasyAPI.Services;
 using System.Collections;
+using System.Runtime.InteropServices;
 
 namespace RentEasyAPI.Controllers
 {
@@ -10,29 +12,60 @@ namespace RentEasyAPI.Controllers
     [Route("[controller]")]
     public class TicketsController : ControllerBase
     {
-        private readonly RentEasyContext _context;
+        private readonly ITicketService _ticketService;
 
-        public TicketsController(RentEasyContext context)
+        public TicketsController(ITicketService ticketService)
         {
-            _context = context;
+            _ticketService = ticketService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Ticket>>> GetTickets()
         {
-            return await _context.Tickets
-                   .Include(t => t.Tenant)
-                   .ToListAsync();
+            var ticktets = await _ticketService.GetTickets();
+            return Ok(ticktets);
         }
 
-        [HttpPost]
+       [HttpPost]
 
         public async Task<ActionResult<Ticket>> PostTicket(Ticket newTicket)
         {
-            _context.Add(newTicket);
-            await _context.SaveChangesAsync();
+            var createdTicket = await _ticketService.PostTicket(newTicket);
+            return Ok(createdTicket);
+        }
 
-            return newTicket;
+        [HttpPut("{id}")]
+
+        public async Task<IActionResult> PutTicket(int id, Ticket updatedTicket)
+        {
+            if (updatedTicket.TicketId != id)
+            {
+                return BadRequest();
+            }
+
+            bool success = await _ticketService.PutTicket(id, updatedTicket);
+
+            if (success)
+            {
+                return NoContent();
+            }
+
+            return NotFound();
+        }
+
+        [HttpDelete("{id}")]
+
+        public async Task<IActionResult> DeleteTicket(int id)
+        {
+            var success = await _ticketService.DeleteTicket(id);
+
+            if(success)
+            {
+                return NoContent();
+            }
+
+            return NotFound();
+            
         }
     }
 }
