@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../RentEasyAPI.Tests/RentEasyAPI.Tests.csproj" />
+  <Project Path="RentEasyAPI.csproj" />
+</Solution>
