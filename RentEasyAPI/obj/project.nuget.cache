@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QLqULBBkDdw=",
+  "dgSpecHash": "cXYLfrxwDB0=",
   "success": true,
-  "projectFilePath": "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj",
+  "projectFilePath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Studies\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Studies\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

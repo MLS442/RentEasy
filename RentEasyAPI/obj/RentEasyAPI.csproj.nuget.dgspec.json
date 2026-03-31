@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj": {}
+    "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj": {
+    "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj",
+        "projectUniqueName": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj",
         "projectName": "RentEasyAPI",
-        "projectPath": "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj",
+        "projectPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj",
         "packagesPath": "C:\\Users\\Studies\\.nuget\\packages\\",
-        "outputPath": "C:\\Roadmap\\RentEasyAPI\\obj\\",
+        "outputPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
