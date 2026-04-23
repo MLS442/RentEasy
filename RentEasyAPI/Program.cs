@@ -1,7 +1,11 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using RentEasyAPI.Data;
 using RentEasyAPI.Services;
+using Scalar.AspNetCore;
+using System.Text;
 using System.Text.Json.Serialization;
 
 var allowReactApp = "_myReactApp";
@@ -30,6 +34,22 @@ builder.Services.AddDbContext<RentEasyContext>(options =>
                   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+// Validating the jwt
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = builder.Configuration["AppSettings:Issuer"],
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["AppSettings:Audience"],
+            ValidateLifetime = true,
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Token"]!)),
+            ValidateIssuerSigningKey = true
+        };
+    });
 
 
 builder.Services.AddControllers().AddJsonOptions(
@@ -39,21 +59,27 @@ builder.Services.AddOpenApi();
 
 // ITicketService to TicketService
 builder.Services.AddScoped<ITicketService, TicketService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
+
 }
 
 app.UseHttpsRedirection();
 
 app.UseCors(allowReactApp);
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

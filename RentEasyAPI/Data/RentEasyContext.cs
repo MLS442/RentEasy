@@ -13,5 +13,6 @@ namespace RentEasyAPI.Data
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
         public DbSet<Property> Properties { get; set; }
+        public DbSet<Landlord> Landlords { get; set; }
     }
 }

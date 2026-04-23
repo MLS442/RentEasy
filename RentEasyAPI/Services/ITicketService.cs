@@ -8,6 +8,5 @@ namespace RentEasyAPI.Services
         Task<Ticket> PostTicket(Ticket newTicket);
         Task<bool> PutTicket(int id, Ticket updatedTicket);
         Task<bool> DeleteTicket(int id);
-
     }
 }
