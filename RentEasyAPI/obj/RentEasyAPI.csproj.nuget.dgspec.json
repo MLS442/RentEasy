@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj": {}
+    "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj": {}
   },
   "projects": {
-    "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj": {
+    "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj",
+        "projectUniqueName": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj",
         "projectName": "RentEasyAPI",
-        "projectPath": "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj",
+        "projectPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj",
         "packagesPath": "C:\\Users\\Studies\\.nuget\\packages\\",
-        "outputPath": "C:\\Roadmap\\RentEasyAPI\\obj\\",
+        "outputPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,6 +31,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -49,8 +50,13 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[10.0.6, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.3, )"
@@ -70,6 +76,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[10.0.3, )"
+            },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.14.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -95,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

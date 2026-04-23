@@ -22,6 +22,45 @@ namespace RentEasyAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("RentEasyAPI.Models.Landlord", b =>
+                {
+                    b.Property<int>("LandlordId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LandlordId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("RefreshTokenExpiryTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("LandlordId");
+
+                    b.ToTable("Landlords");
+                });
+
             modelBuilder.Entity("RentEasyAPI.Models.Property", b =>
                 {
                     b.Property<int>("PropertyId")
@@ -37,13 +76,18 @@ namespace RentEasyAPI.Migrations
                     b.Property<int>("Bedrooms")
                         .HasColumnType("int");
 
-                    b.Property<DateOnly>("LeaseEndDate")
+                    b.Property<int>("LandlordId")
+                        .HasColumnType("int");
+
+                    b.Property<DateOnly?>("LeaseEndDate")
                         .HasColumnType("date");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("PropertyId");
+
+                    b.HasIndex("LandlordId");
 
                     b.ToTable("Properties");
                 });
@@ -70,6 +114,14 @@ namespace RentEasyAPI.Migrations
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
@@ -115,6 +167,17 @@ namespace RentEasyAPI.Migrations
                     b.ToTable("Tickets");
                 });
 
+            modelBuilder.Entity("RentEasyAPI.Models.Property", b =>
+                {
+                    b.HasOne("RentEasyAPI.Models.Landlord", "Landlord")
+                        .WithMany("Properties")
+                        .HasForeignKey("LandlordId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Landlord");
+                });
+
             modelBuilder.Entity("RentEasyAPI.Models.Tenant", b =>
                 {
                     b.HasOne("RentEasyAPI.Models.Property", "Property")
@@ -135,6 +198,11 @@ namespace RentEasyAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("Tenant");
+                });
+
+            modelBuilder.Entity("RentEasyAPI.Models.Landlord", b =>
+                {
+                    b.Navigation("Properties");
                 });
 
             modelBuilder.Entity("RentEasyAPI.Models.Property", b =>
