@@ -1,65 +1,84 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Roadmap\\RentEasyAPI\\",
+  "WorkspaceRootPath": "C:\\RentEasy\\RentEasyAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F61948F0-8EFD-C828-52BA-3A139E4B6B7E}|..\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj|c:\\roadmap\\renteasyapi.tests\\ticketscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\controllers\\tenantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:controllers\\tenantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\data\\renteasycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\data\\renteasycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:data\\renteasycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\services\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:services\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\models\\landlord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:models\\landlord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\renteasyapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:renteasyapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\renteasyapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:renteasyapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\models\\tenant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\models\\tenant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:models\\tenant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasyapi\\migrations\\20260310202533_addrelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:migrations\\20260310202533_addrelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Roadmap\\RentEasyAPI.Tests\\TicketsControllerTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Roadmap\\Renteasy\\RentEasyAPI\\Migrations\\20260310202533_AddRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\renteasyapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:renteasyapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\controllers\\tenantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:controllers\\tenantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\services\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:services\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\renteasyapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:renteasyapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\renteasyapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:renteasyapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -69,7 +88,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -77,74 +96,156 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RentEasyContext.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Data\\RentEasyContext.cs",
-              "RelativeDocumentMoniker": "Data\\RentEasyContext.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Data\\RentEasyContext.cs",
-              "RelativeToolTip": "Data\\RentEasyContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T19:17:41.573Z"
+              "WhenOpened": "2026-04-25T01:52:24.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Landlord.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Models\\Landlord.cs",
+              "RelativeDocumentMoniker": "Models\\Landlord.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Models\\Landlord.cs",
+              "RelativeToolTip": "Models\\Landlord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T01:49:56.782Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAiwKwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T01:01:04.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RentEasyContext.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Data\\RentEasyContext.cs",
+              "RelativeDocumentMoniker": "Data\\RentEasyContext.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Data\\RentEasyContext.cs",
+              "RelativeToolTip": "Data\\RentEasyContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T19:17:41.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Tenant.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Models\\Tenant.cs",
+              "RelativeDocumentMoniker": "Models\\Tenant.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Models\\Tenant.cs",
+              "RelativeToolTip": "Models\\Tenant.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T17:55:44.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RentEasyAPI.http",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.http",
+              "RelativeDocumentMoniker": "RentEasyAPI.http",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.http",
+              "RelativeToolTip": "RentEasyAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-04-23T12:14:11.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PropertiesController.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Controllers\\PropertiesController.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Controllers\\PropertiesController.cs",
               "RelativeDocumentMoniker": "Controllers\\PropertiesController.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Controllers\\PropertiesController.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Controllers\\PropertiesController.cs",
               "RelativeToolTip": "Controllers\\PropertiesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T01:46:13.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TicketService.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Services\\TicketService.cs",
-              "RelativeDocumentMoniker": "Services\\TicketService.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Services\\TicketService.cs",
-              "RelativeToolTip": "Services\\TicketService.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwAwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T15:31:40.321Z",
-              "EditorCaption": ""
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-05T19:41:47.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-23T12:16:57.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "TicketsController.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Controllers\\TicketsController.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Controllers\\TicketsController.cs",
               "RelativeDocumentMoniker": "Controllers\\TicketsController.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Controllers\\TicketsController.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Controllers\\TicketsController.cs",
               "RelativeToolTip": "Controllers\\TicketsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T21:50:56.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T21:50:56.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
+              "Title": "TicketService.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Services\\TicketService.cs",
+              "RelativeDocumentMoniker": "Services\\TicketService.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Services\\TicketService.cs",
+              "RelativeToolTip": "Services\\TicketService.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwAwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T15:31:40.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "TicketsControllerTests.cs",
               "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI.Tests\\TicketsControllerTests.cs",
-              "RelativeDocumentMoniker": "..\\RentEasyAPI.Tests\\TicketsControllerTests.cs",
+              "RelativeDocumentMoniker": "..\\..\\Roadmap\\RentEasyAPI.Tests\\TicketsControllerTests.cs",
               "ToolTip": "C:\\Roadmap\\RentEasyAPI.Tests\\TicketsControllerTests.cs",
-              "RelativeToolTip": "..\\RentEasyAPI.Tests\\TicketsControllerTests.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCcAAAAkAAAAAAAAAA==",
+              "RelativeToolTip": "..\\..\\Roadmap\\RentEasyAPI.Tests\\TicketsControllerTests.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAQwHYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T16:12:24.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-22T16:12:24.232Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Program.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Program.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAAACcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -152,24 +253,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "TenantsController.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Controllers\\TenantsController.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Controllers\\TenantsController.cs",
               "RelativeDocumentMoniker": "Controllers\\TenantsController.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Controllers\\TenantsController.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Controllers\\TenantsController.cs",
               "RelativeToolTip": "Controllers\\TenantsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T00:30:32.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T00:30:32.263Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Property.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Models\\Property.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Models\\Property.cs",
               "RelativeDocumentMoniker": "Models\\Property.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Models\\Property.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Models\\Property.cs",
               "RelativeToolTip": "Models\\Property.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -177,23 +277,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
               "Title": "20260310202533_AddRelations.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Migrations\\20260310202533_AddRelations.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260310202533_AddRelations.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Migrations\\20260310202533_AddRelations.cs",
-              "RelativeToolTip": "Migrations\\20260310202533_AddRelations.cs",
+              "DocumentMoniker": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\Migrations\\20260310202533_AddRelations.cs",
+              "RelativeDocumentMoniker": "..\\..\\Roadmap\\Renteasy\\RentEasyAPI\\Migrations\\20260310202533_AddRelations.cs",
+              "ToolTip": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\Migrations\\20260310202533_AddRelations.cs",
+              "RelativeToolTip": "..\\..\\Roadmap\\Renteasy\\RentEasyAPI\\Migrations\\20260310202533_AddRelations.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-10T20:25:33.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "ITicketService.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Services\\ITicketService.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Services\\ITicketService.cs",
               "RelativeDocumentMoniker": "Services\\ITicketService.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Services\\ITicketService.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Services\\ITicketService.cs",
               "RelativeToolTip": "Services\\ITicketService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -201,22 +301,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "RentEasyAPI",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
               "RelativeDocumentMoniker": "RentEasyAPI.csproj",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
               "RelativeToolTip": "RentEasyAPI.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-03-03T20:23:13.324Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "RentEasyAPI.csproj",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
               "RelativeDocumentMoniker": "RentEasyAPI.csproj",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\RentEasyAPI.csproj",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
               "RelativeToolTip": "RentEasyAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -224,35 +324,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-05T19:41:47.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Tenant.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Models\\Tenant.cs",
-              "RelativeDocumentMoniker": "Models\\Tenant.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Models\\Tenant.cs",
-              "RelativeToolTip": "Models\\Tenant.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T17:55:44.926Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "Ticket.cs",
-              "DocumentMoniker": "C:\\Roadmap\\RentEasyAPI\\Models\\Ticket.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Models\\Ticket.cs",
               "RelativeDocumentMoniker": "Models\\Ticket.cs",
-              "ToolTip": "C:\\Roadmap\\RentEasyAPI\\Models\\Ticket.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Models\\Ticket.cs",
               "RelativeToolTip": "Models\\Ticket.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

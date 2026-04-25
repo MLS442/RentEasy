@@ -8,8 +8,6 @@
 
         public string Address { get; set; }
 
-        public string Email { get; set; }
-
         public string Phone { get; set; }
 
         public DateOnly BirthDate { get; set; }
@@ -19,6 +17,5 @@
         public Property? Property { get; set; }
 
         public ICollection<Ticket>? Tickets { get; set; }
-
     }
 }
