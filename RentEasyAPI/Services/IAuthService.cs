@@ -5,9 +5,9 @@ namespace RentEasyAPI.Services
 {
     public interface IAuthService
     {
-        Task<int?> Register(Landlord landlord, string password);
+        Task<int?> Register(User user, string password);
         Task<TokenResponse?> Login(string email, string password);
         Task<bool> UserExists(string email);
-        Task<TokenResponse?> RefreshTokens(Landlord landlord);
+        Task<TokenResponse?> RefreshTokens(User user);
     }
 }

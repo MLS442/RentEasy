@@ -21,72 +21,76 @@ namespace RentEasyAPI.Services
             _configuration = configuration;
         }
 
-        public async Task<int?> Register(Landlord landlord, string password)
+        public async Task<int?> Register(User user, string password)
         {
-            if (await UserExists(landlord.Email))
+            if (await UserExists(user.Email))
             {
                 return null;
             }
 
             CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
 
-            landlord.PasswordHash = passwordHash;
-            landlord.PasswordSalt = passwordSalt;
-            landlord.Role = "Landlord";
+            user.PasswordHash = passwordHash;
+            user.PasswordSalt = passwordSalt;
+    
+            if(user.Role != "Landlord" || user.Role != "Tenant")
+            {
+                return null;
+            }
 
-            await _context.Landlords.AddAsync(landlord);
+            await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
 
-            return landlord.LandlordId;
+            return user.LandlordId;
         }
 
         public async Task<TokenResponse?> Login(string email, string password)
         {
-            Landlord landlord = await _context.Landlords
+            User user = await _context.Users
                 .FirstOrDefaultAsync(l => l.Email.ToLower().Equals(email.ToLower()));
 
-            if(landlord == null)
+            if(user == null)
             {
                 return null;
             }
-            else if (!VerifyPasswordHash(password, landlord.PasswordHash, landlord.PasswordSalt))
+            else if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
             {
                 return null;
             }
             else
             {
-                return await CreateTokenResponse(landlord);
+                return await CreateTokenResponse(user);
             }
         }
 
-        private async Task<TokenResponse> CreateTokenResponse(Landlord landlord)
+        private async Task<TokenResponse> CreateTokenResponse(User user)
         {
             return new TokenResponse
             {
-                AccessToken = CreateToken(landlord),
-                RefreshToken = await GenerateAndSaveRefreshToken(landlord)
+                AccessToken = CreateToken(user),
+                RefreshToken = await GenerateAndSaveRefreshToken(user)
             };
         }
 
-        public async Task<TokenResponse?> RefreshTokens(Landlord landlord)
+        public async Task<TokenResponse?> RefreshTokens(User user)
         {
-            landlord = await ValidateRefreshToken(landlord.LandlordId, landlord.RefreshToken);
-            if (landlord is null)
+            user = await ValidateRefreshToken(user.UserId, user.RefreshToken);
+            if (user is null)
                 return null;
 
-            return await CreateTokenResponse(landlord);
+            return await CreateTokenResponse(user);
         }
-        private async Task<Landlord?> ValidateRefreshToken(int landlordId, string refreshToken)
+        private async Task<User?> ValidateRefreshToken(int userId, string refreshToken)
         {
-            var landlord = await _context.Landlords.FindAsync(landlordId);
+            var user = await _context.Users.FindAsync(userId);
 
-            if (landlord is null || landlord.RefreshToken != refreshToken 
-                ||landlord.RefreshTokenExpiryTime <= DateTime.UtcNow)
+            if (user is null || user.RefreshToken != refreshToken 
+                ||user.RefreshTokenExpiryTime <= DateTime.UtcNow)
             {
                 return null;
             }
 
-            return landlord;
+            return user;
         }
 
         private string GenerateRefreshToken()
@@ -97,11 +101,11 @@ namespace RentEasyAPI.Services
             return Convert.ToBase64String(randomNumber);
         }
 
-        private async Task<string> GenerateAndSaveRefreshToken(Landlord landlord)
+        private async Task<string> GenerateAndSaveRefreshToken(User user)
         {
             var refreshToken = GenerateRefreshToken();
-            landlord.RefreshToken = refreshToken;
-            landlord.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
             await _context.SaveChangesAsync();
             return refreshToken;
         }
@@ -135,7 +139,7 @@ namespace RentEasyAPI.Services
 
         public async Task<bool> UserExists(string email)
         {
-            if(await _context.Landlords.AnyAsync(l => l.Email.ToLower() == email.ToLower()))
+            if(await _context.Users.AnyAsync(u => u.Email.ToLower() == email.ToLower()))
             {
                 return true;
             }
@@ -143,14 +147,14 @@ namespace RentEasyAPI.Services
             return false;
         }
 
-        private string CreateToken(Landlord landlord)
+        private string CreateToken(User user)
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Email, landlord.Email),
-                new Claim(ClaimTypes.NameIdentifier, landlord.LandlordId.ToString()),
-                new Claim(ClaimTypes.Name, landlord.FullName),
-                new Claim(ClaimTypes.Role, landlord.Role)
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+          
+                new Claim(ClaimTypes.Role, user.Role)
             };
 
             var key = new SymmetricSecurityKey(
@@ -164,7 +168,7 @@ namespace RentEasyAPI.Services
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(15),
                 signingCredentials: creds
-            ); 
+            );
 
             return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
         }
