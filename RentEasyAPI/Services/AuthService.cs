@@ -33,7 +33,7 @@ namespace RentEasyAPI.Services
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
     
-            if(user.Role != "Landlord" || user.Role != "Tenant")
+            if(user.Role != "Landlord" && user.Role != "Tenant")
             {
                 return null;
             }
@@ -41,12 +41,12 @@ namespace RentEasyAPI.Services
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
 
-            return user.LandlordId;
+            return user.UserId;
         }
 
         public async Task<TokenResponse?> Login(string email, string password)
         {
-            User user = await _context.Users
+            User user = await _context.Users.Include(u => u.Landlord).Include(u => u.Tenant)
                 .FirstOrDefaultAsync(l => l.Email.ToLower().Equals(email.ToLower()));
 
             if(user == null)
@@ -82,7 +82,7 @@ namespace RentEasyAPI.Services
         }
         private async Task<User?> ValidateRefreshToken(int userId, string refreshToken)
         {
-            var user = await _context.Users.FindAsync(userId);
+            var user = await _context.Users.Include(u => u.Landlord).Include(u => u.Tenant).FirstOrDefaultAsync(u => u.UserId ==userId);
 
             if (user is null || user.RefreshToken != refreshToken 
                 ||user.RefreshTokenExpiryTime <= DateTime.UtcNow)
@@ -149,11 +149,22 @@ namespace RentEasyAPI.Services
 
         private string CreateToken(User user)
         {
+            string userName;
+
+            if (user.Role == "Landlord")
+            {
+                userName = user.Landlord.FullName;
+            }
+            else
+            {
+                userName = user.Tenant.FullName;
+            }
+
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-          
+                new Claim(ClaimTypes.Name, userName),
                 new Claim(ClaimTypes.Role, user.Role)
             };
 

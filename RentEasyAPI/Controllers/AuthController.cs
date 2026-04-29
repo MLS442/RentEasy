@@ -19,21 +19,34 @@ namespace RentEasyAPI.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<ActionResult<int?>> Register(LandlordRegisterDto request)
+        public async Task<ActionResult<int?>> Register(UserRegisterDto request)
         {
-            var newUser = await _authService.Register(
-                new Landlord { Email = request.Email, FullName = request.FullName }, request.Password);  
+            var newUser = new User {Email = request.Email, Role = request.Role };
 
-            if (newUser == null)
+            if (request.Role == "Landlord")
+            {
+               newUser.Landlord = new Landlord { FullName = request.FullName};
+            }
+            else if (request.Role == "Tenant")
+            {
+                newUser.Tenant = new Tenant { FullName = request.FullName };
+            }
+
+            
+
+            var result = await _authService.Register(
+                newUser, request.Password);
+
+            if (result == null)
             {
                 return BadRequest("User already exists");
             }
 
-            return Ok(newUser);
+            return Ok(result);
         }
 
         [HttpPost("Login")]
-        public async Task<ActionResult<TokenResponse?>> Login(LandlordLoginDto request)
+        public async Task<ActionResult<TokenResponse?>> Login(UserLoginDto request)
         {
             var loginRequest = await _authService.Login(request.Email, request.Password);
 
@@ -46,10 +59,10 @@ namespace RentEasyAPI.Controllers
         }
 
         [HttpPost("refresh-token")]
-        public async Task<ActionResult<TokenResponse>> RefreshToken(LandlordRefreshTokenRequestDto request)
+        public async Task<ActionResult<TokenResponse>> RefreshToken(UserRefreshTokenRequestDto request)
         {
             var tokenRefresh = await _authService.RefreshTokens(
-                new Landlord { LandlordId = request.LandlordId, RefreshToken = request.RefreshToken});
+                new User { UserId = request.UserId, RefreshToken = request.RefreshToken});
             if (tokenRefresh is null || tokenRefresh.AccessToken is null || tokenRefresh.RefreshToken is null)
                 return Unauthorized("Invalid refresh token.");
 
