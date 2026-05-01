@@ -7,6 +7,11 @@ using RentEasyAPI.Services;
 using Scalar.AspNetCore;
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Reflection;
+using AutoMapper;
+
+
+
 
 var allowReactApp = "_myReactApp";
 
@@ -29,6 +34,8 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(Program));
+
 
 builder.Services.AddDbContext<RentEasyContext>(options =>
                   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))

@@ -309,3 +309,4 @@ C:\RentEasy\RentEasyAPI.Tests\obj\Debug\net10.0\refint\RentEasyAPI.Tests.dll
 C:\RentEasy\RentEasyAPI.Tests\obj\Debug\net10.0\RentEasyAPI.Tests.pdb
 C:\RentEasy\RentEasyAPI.Tests\obj\Debug\net10.0\RentEasyAPI.Tests.genruntimeconfig.cache
 C:\RentEasy\RentEasyAPI.Tests\obj\Debug\net10.0\ref\RentEasyAPI.Tests.dll
+C:\RentEasy\RentEasyAPI.Tests\bin\Debug\net10.0\AutoMapper.dll

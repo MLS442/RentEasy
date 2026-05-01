@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using RentEasyAPI.Data;
+using RentEasyAPI.DTOs;
 using RentEasyAPI.Models;
 using RentEasyAPI.Responses;
 using System.IdentityModel.Tokens.Jwt;
@@ -21,27 +22,27 @@ namespace RentEasyAPI.Services
             _configuration = configuration;
         }
 
-        public async Task<int?> Register(User user, string password)
+        public async Task<int?> Register(UserRegisterDto request)
         {
-            if (await UserExists(user.Email))
+            if (await UserExists(request.Email))
             {
                 return null;
             }
 
             CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
 
-            user.PasswordHash = passwordHash;
-            user.PasswordSalt = passwordSalt;
+            request.PasswordHash = passwordHash;
+            request.PasswordSalt = passwordSalt;
     
-            if(user.Role != "Landlord" && user.Role != "Tenant")
+            if(request.Role != "Landlord" && request.Role != "Tenant")
             {
                 return null;
             }
 
-            await _context.Users.AddAsync(user);
+            await _context.Users.AddAsync(request);
             await _context.SaveChangesAsync();
 
-            return user.UserId;
+            return request.UserId;
         }
 
         public async Task<TokenResponse?> Login(string email, string password)
