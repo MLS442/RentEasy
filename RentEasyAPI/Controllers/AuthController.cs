@@ -21,21 +21,7 @@ namespace RentEasyAPI.Controllers
         [HttpPost("Register")]
         public async Task<ActionResult<int?>> Register(UserRegisterDto request)
         {
-            var newUser = new User {Email = request.Email, Role = request.Role };
-
-            if (request.Role == "Landlord")
-            {
-               newUser.Landlord = new Landlord { FullName = request.FullName};
-            }
-            else if (request.Role == "Tenant")
-            {
-                newUser.Tenant = new Tenant { FullName = request.FullName };
-            }
-
-            
-
-            var result = await _authService.Register(
-                newUser, request.Password);
+            var result = await _authService.Register(request);
 
             if (result == null)
             {

@@ -1,4 +1,5 @@
-﻿using Azure.Core;
+﻿using AutoMapper;
+using Azure.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using RentEasyAPI.Data;
@@ -16,33 +17,48 @@ namespace RentEasyAPI.Services
     {
         private readonly RentEasyContext _context;
         private readonly IConfiguration _configuration;
-        public AuthService(RentEasyContext context, IConfiguration configuration)
+        private readonly IMapper _mapper;
+        public AuthService(RentEasyContext context, IConfiguration configuration, IMapper mapper)
         {
             _context = context;
             _configuration = configuration;
+            _mapper = mapper;
         }
 
         public async Task<int?> Register(UserRegisterDto request)
         {
+            if (request.Role != "Landlord" && request.Role != "Tenant")
+            {
+                return null;
+            }
+
+            var user = _mapper.Map<User>(request);
+
+            if(request.Role == "Landlord")
+            {
+                var landlord =_mapper.Map<Landlord>(request);
+                user.Landlord = landlord;
+            }
+            else if(request.Role == "Tenant")
+            {
+                var tenant = _mapper.Map<Tenant>(request);
+                user.Tenant = tenant;
+            }
+
             if (await UserExists(request.Email))
             {
                 return null;
             }
 
-            CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
+            CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
-            request.PasswordHash = passwordHash;
-            request.PasswordSalt = passwordSalt;
-    
-            if(request.Role != "Landlord" && request.Role != "Tenant")
-            {
-                return null;
-            }
-
-            await _context.Users.AddAsync(request);
+            user.PasswordHash = passwordHash;
+            user.PasswordSalt = passwordSalt;
+   
+            await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
 
-            return request.UserId;
+            return user.UserId;
         }
 
         public async Task<TokenResponse?> Login(string email, string password)

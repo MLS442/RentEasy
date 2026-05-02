@@ -29,7 +29,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "RentEasyAPI.DTOs.LandlordLoginDto",
+        "Type": "RentEasyAPI.DTOs.UserLoginDto",
         "IsRequired": true
       }
     ],
@@ -55,7 +55,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "RentEasyAPI.DTOs.LandlordRefreshTokenRequestDto",
+        "Type": "RentEasyAPI.DTOs.UserRefreshTokenRequestDto",
         "IsRequired": true
       }
     ],
@@ -81,7 +81,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "RentEasyAPI.DTOs.LandlordRegisterDto",
+        "Type": "RentEasyAPI.DTOs.UserRegisterDto",
         "IsRequired": true
       }
     ],
