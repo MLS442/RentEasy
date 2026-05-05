@@ -4,6 +4,9 @@
     {
         public int LandlordId { get; set; }
         public string FullName { get; set; }
+<<<<<<< HEAD
+        public ICollection<Property>? Properties { get; set; }
+=======
         public string Email { get; set; }
         public ICollection<Property>? Properties { get; set; }
         public byte[] PasswordHash { get; set; }
@@ -11,5 +14,6 @@
         public string Role { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiryTime { get; set; }
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
     }
 }

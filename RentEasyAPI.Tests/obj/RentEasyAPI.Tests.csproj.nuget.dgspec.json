@@ -1,6 +1,19 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\RentEasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\RentEasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\RentEasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj",
+        "projectName": "RentEasyAPI.Tests",
+        "projectPath": "C:\\RentEasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj",
+        "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
+        "outputPath": "C:\\RentEasy\\RentEasyAPI.Tests\\obj\\",
+=======
     "C:\\Roadmap\\Renteasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj": {}
   },
   "projects": {
@@ -12,12 +25,17 @@
         "projectPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj",
         "packagesPath": "C:\\Users\\Studies\\.nuget\\packages\\",
         "outputPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI.Tests\\obj\\",
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
+          "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
           "C:\\Users\\Studies\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -31,10 +49,18 @@
         },
         "frameworks": {
           "net10.0": {
+<<<<<<< HEAD
+            "framework": "net10.0",
+            "targetAlias": "net10.0",
+            "projectReferences": {
+              "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj": {
+                "projectPath": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj"
+=======
             "targetAlias": "net10.0",
             "projectReferences": {
               "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj": {
                 "projectPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj"
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
               }
             }
           }
@@ -53,6 +79,10 @@
       },
       "frameworks": {
         "net10.0": {
+<<<<<<< HEAD
+          "framework": "net10.0",
+=======
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
@@ -92,7 +122,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -370,6 +404,16 @@
         }
       }
     },
+<<<<<<< HEAD
+    "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
+        "projectName": "RentEasyAPI",
+        "projectPath": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
+        "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
+        "outputPath": "C:\\RentEasy\\RentEasyAPI\\obj\\",
+=======
     "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -378,12 +422,17 @@
         "projectPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj",
         "packagesPath": "C:\\Users\\Studies\\.nuget\\packages\\",
         "outputPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\obj\\",
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
+          "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
           "C:\\Users\\Studies\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -397,6 +446,10 @@
         },
         "frameworks": {
           "net10.0": {
+<<<<<<< HEAD
+            "framework": "net10.0",
+=======
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -415,8 +468,22 @@
       },
       "frameworks": {
         "net10.0": {
+<<<<<<< HEAD
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[16.1.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[10.0.6, )"
+            },
+=======
+          "targetAlias": "net10.0",
+          "dependencies": {
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.3, )"
@@ -437,6 +504,13 @@
               "target": "Package",
               "version": "[10.0.3, )"
             },
+<<<<<<< HEAD
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.14.1, )"
+            },
+=======
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[10.1.4, )"
@@ -461,7 +535,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

@@ -14,5 +14,23 @@ namespace RentEasyAPI.Data
         public DbSet<Tenant> Tenants { get; set; }
         public DbSet<Property> Properties { get; set; }
         public DbSet<Landlord> Landlords { get; set; }
+<<<<<<< HEAD
+        public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Landlord)
+                .WithOne()
+                .HasForeignKey<User>(u => u.LandlordId);
+
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Tenant)
+                .WithOne()
+                .HasForeignKey<User>(u => u.TenantId);
+        }
+    }    
+=======
     }
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
 }
