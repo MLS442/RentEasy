@@ -34,7 +34,7 @@ namespace RentEasyAPI.Controllers
         [HttpPost("Login")]
         public async Task<ActionResult<TokenResponse?>> Login(UserLoginDto request)
         {
-            var loginRequest = await _authService.Login(request.Email, request.Password);
+            var loginRequest = await _authService.Login(request);
 
             if(loginRequest == null)
             {

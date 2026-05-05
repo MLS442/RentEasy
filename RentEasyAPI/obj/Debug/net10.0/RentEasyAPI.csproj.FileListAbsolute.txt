@@ -164,4 +164,3 @@ C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\RentEasyAPI.genruntimeconfig.cache
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\ref\RentEasyAPI.dll
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\RentEasy\RentEasyAPI\bin\Debug\net10.0\AutoMapper.dll
-C:\RentEasy\RentEasyAPI\bin\Debug\net10.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

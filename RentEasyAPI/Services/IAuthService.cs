@@ -7,7 +7,7 @@ namespace RentEasyAPI.Services
     public interface IAuthService
     {
         Task<int?> Register(UserRegisterDto request);
-        Task<TokenResponse?> Login(string email, string password);
+        Task<TokenResponse?> Login(UserLoginDto request);
         Task<bool> UserExists(string email);
         Task<TokenResponse?> RefreshTokens(User user);
     }

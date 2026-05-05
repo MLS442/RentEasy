@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Azure.Core;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using RentEasyAPI.Data;
@@ -50,10 +51,10 @@ namespace RentEasyAPI.Services
                 return null;
             }
 
-            CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
+            var hashedPassword = new PasswordHasher<User>()
+                .HashPassword(user, request.Password);
 
-            user.PasswordHash = passwordHash;
-            user.PasswordSalt = passwordSalt;
+            user.PasswordHash = hashedPassword;
    
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
@@ -61,16 +62,17 @@ namespace RentEasyAPI.Services
             return user.UserId;
         }
 
-        public async Task<TokenResponse?> Login(string email, string password)
+        public async Task<TokenResponse?> Login(UserLoginDto request)
         {
             User user = await _context.Users.Include(u => u.Landlord).Include(u => u.Tenant)
-                .FirstOrDefaultAsync(l => l.Email.ToLower().Equals(email.ToLower()));
+                .FirstOrDefaultAsync(l => l.Email.ToLower().Equals(request.Email.ToLower()));
 
             if(user == null)
             {
                 return null;
             }
-            else if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+            else if (new PasswordHasher<User>().VerifyHashedPassword(user, user.PasswordHash, request.Password)
+                == PasswordVerificationResult.Failed)
             {
                 return null;
             }
@@ -126,34 +128,6 @@ namespace RentEasyAPI.Services
             await _context.SaveChangesAsync();
             return refreshToken;
         }
-
-
-
-        private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
-        {
-            using (var hmac = new System.Security.Cryptography.HMACSHA512())
-            {
-                passwordSalt = hmac.Key;
-                passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-            }
-        }
-
-        private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
-        {
-            using (var hmac = new System.Security.Cryptography.HMACSHA512(passwordSalt))
-            {
-                var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-                for (int i = 0; i < computedHash.Length; i++)
-                {
-                    if (computedHash[i] != passwordHash[i])
-                    {
-                        return false;
-                    }
-                }
-                return true;
-            }
-        }
-
         public async Task<bool> UserExists(string email)
         {
             if(await _context.Users.AnyAsync(u => u.Email.ToLower() == email.ToLower()))

@@ -34,7 +34,8 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddAutoMapper(typeof(Program));
+// The "cfg => {}" is now required, even if you don't have custom config here
+builder.Services.AddAutoMapper(cfg => { }, typeof(Program));
 
 
 builder.Services.AddDbContext<RentEasyContext>(options =>
