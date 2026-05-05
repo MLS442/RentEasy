@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "dIcD24ZHRfM=",
   "success": true,
   "projectFilePath": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
+=======
+  "dgSpecHash": "cXYLfrxwDB0=",
+  "success": true,
+  "projectFilePath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj",
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
   "expectedPackageFiles": [
     "C:\\Users\\moham\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",

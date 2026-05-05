@@ -152,6 +152,7 @@ C:\Roadmap\RentEasyAPI.Tests\obj\Debug\net10.0\RentEasyAPI.Tests.genruntimeconfi
 C:\Roadmap\RentEasyAPI.Tests\obj\Debug\net10.0\ref\RentEasyAPI.Tests.dll
 C:\Roadmap\RentEasyAPI.Tests\bin\Debug\net10.0\Castle.Core.dll
 C:\Roadmap\RentEasyAPI.Tests\bin\Debug\net10.0\Moq.dll
+<<<<<<< HEAD
 C:\RentEasy\RentEasyAPI.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_RentEasyAPI.Tests
 C:\RentEasy\RentEasyAPI.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_RentEasyAPI.Tests
 C:\RentEasy\RentEasyAPI.Tests\bin\Debug\net10.0\testhost.exe
@@ -310,3 +311,5 @@ C:\RentEasy\RentEasyAPI.Tests\obj\Debug\net10.0\RentEasyAPI.Tests.pdb
 C:\RentEasy\RentEasyAPI.Tests\obj\Debug\net10.0\RentEasyAPI.Tests.genruntimeconfig.cache
 C:\RentEasy\RentEasyAPI.Tests\obj\Debug\net10.0\ref\RentEasyAPI.Tests.dll
 C:\RentEasy\RentEasyAPI.Tests\bin\Debug\net10.0\AutoMapper.dll
+=======
+>>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
