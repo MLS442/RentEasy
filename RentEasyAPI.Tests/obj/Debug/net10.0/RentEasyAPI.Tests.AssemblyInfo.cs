@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RentEasyAPI.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b02865ddea4029eb3f1c37fe2ec6d4799cd554c2")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b98f318eb684770d85c8a905b5ee724ec083cee2")]
->>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bb8f3a8bd5061af6e97b61484afc4d3676576f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("RentEasyAPI.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RentEasyAPI.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
