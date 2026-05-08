@@ -47,8 +47,7 @@ namespace RentEasyAPI.Controllers
         [HttpPost("refresh-token")]
         public async Task<ActionResult<TokenResponse>> RefreshToken(UserRefreshTokenRequestDto request)
         {
-            var tokenRefresh = await _authService.RefreshTokens(
-                new User { UserId = request.UserId, RefreshToken = request.RefreshToken});
+            var tokenRefresh = await _authService.RefreshTokens(request);
             if (tokenRefresh is null || tokenRefresh.AccessToken is null || tokenRefresh.RefreshToken is null)
                 return Unauthorized("Invalid refresh token.");
 

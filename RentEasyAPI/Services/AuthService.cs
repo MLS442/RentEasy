@@ -91,9 +91,9 @@ namespace RentEasyAPI.Services
             };
         }
 
-        public async Task<TokenResponse?> RefreshTokens(User user)
+        public async Task<TokenResponse?> RefreshTokens(UserRefreshTokenRequestDto request)
         {
-            user = await ValidateRefreshToken(user.UserId, user.RefreshToken);
+            var user = await ValidateRefreshToken(request.UserId, request.RefreshToken);
             if (user is null)
                 return null;
 
