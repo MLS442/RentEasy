@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Roadmap\\Renteasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj": {}
+    "C:\\RentEasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Roadmap\\Renteasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj": {
+    "C:\\RentEasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Roadmap\\Renteasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj",
+        "projectUniqueName": "C:\\RentEasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj",
         "projectName": "RentEasyAPI.Tests",
-        "projectPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj",
-        "packagesPath": "C:\\Users\\Studies\\.nuget\\packages\\",
-        "outputPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI.Tests\\obj\\",
+        "projectPath": "C:\\RentEasy\\RentEasyAPI.Tests\\RentEasyAPI.Tests.csproj",
+        "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
+        "outputPath": "C:\\RentEasy\\RentEasyAPI.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Studies\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -34,8 +34,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj": {
-                "projectPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj"
+              "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj": {
+                "projectPath": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj"
               }
             }
           }
@@ -372,20 +372,20 @@
         }
       }
     },
-    "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj": {
+    "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj",
+        "projectUniqueName": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
         "projectName": "RentEasyAPI",
-        "projectPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\RentEasyAPI.csproj",
-        "packagesPath": "C:\\Users\\Studies\\.nuget\\packages\\",
-        "outputPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\obj\\",
+        "projectPath": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
+        "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
+        "outputPath": "C:\\RentEasy\\RentEasyAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Studies\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

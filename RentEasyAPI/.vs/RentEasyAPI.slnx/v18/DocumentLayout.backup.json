@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\",
+  "WorkspaceRootPath": "C:\\RentEasy\\RentEasyAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasy\\renteasyapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\roadmap\\renteasy\\renteasyapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,37 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\IAuthService.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Services\\IAuthService.cs",
+              "RelativeToolTip": "Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T17:18:37.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\Services\\AuthService.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
-              "ToolTip": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\Services\\AuthService.cs*",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Services\\AuthService.cs*",
               "RelativeToolTip": "Services\\AuthService.cs*",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAgwF0AAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAYwD4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T17:08:06.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Roadmap\\Renteasy\\RentEasyAPI\\Controllers\\AuthController.cs*",
-              "RelativeToolTip": "Controllers\\AuthController.cs*",
-              "ViewState": "AgIAABUAAAAAAAAAAAA1wDEAAABHAAAAAAAAAA==",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwDgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T17:04:48.832Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }
