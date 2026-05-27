@@ -1,14 +1,15 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using RentEasyAPI.Data;
+using RentEasyAPI.Exeptions;
 using RentEasyAPI.Services;
 using Scalar.AspNetCore;
+using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
-using System.Reflection;
-using AutoMapper;
 
 
 
@@ -20,6 +21,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 // Add services to the container.
+
+builder.Services.AddProblemDetails();
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
 
 builder.Services.AddCors(options =>
 {
@@ -70,6 +75,8 @@ builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
 var app = builder.Build();
+
+app.UseExceptionHandler();
 
 app.UseSwagger();
 app.UseSwaggerUI();
