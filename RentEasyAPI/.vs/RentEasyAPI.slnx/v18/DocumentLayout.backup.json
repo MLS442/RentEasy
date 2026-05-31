@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\RentEasy\\RentEasyAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\exeptions\\globalexeptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:exeptions\\globalexeptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\exeptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:exeptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5DA4577C-2D76-1DE1-79EB-0A5D593062E9}|RentEasyAPI.csproj|c:\\renteasy\\renteasyapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,41 +38,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GlobalExeptionHandler.cs",
-              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Exeptions\\GlobalExeptionHandler.cs",
-              "RelativeDocumentMoniker": "Exeptions\\GlobalExeptionHandler.cs",
-              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Exeptions\\GlobalExeptionHandler.cs",
-              "RelativeToolTip": "Exeptions\\GlobalExeptionHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T02:16:27.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RentEasyAPI",
-              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
-              "RelativeDocumentMoniker": "RentEasyAPI.csproj",
-              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
-              "RelativeToolTip": "RentEasyAPI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-23T02:13:10.891Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRegisterDto.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\DTOs\\UserRegisterDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserRegisterDto.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\DTOs\\UserRegisterDto.cs",
+              "RelativeToolTip": "DTOs\\UserRegisterDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T01:27:42.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T23:41:04.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Exeptions\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "Exeptions\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\Exeptions\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "Exeptions\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T02:16:27.563Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "RentEasyAPI.csproj",
+              "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
+              "RelativeDocumentMoniker": "RentEasyAPI.csproj",
+              "ToolTip": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
+              "RelativeToolTip": "RentEasyAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-23T02:13:10.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Services\\IAuthService.cs",
               "RelativeDocumentMoniker": "Services\\IAuthService.cs",
@@ -76,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
@@ -84,12 +115,11 @@
               "RelativeToolTip": "Services\\AuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:08:06.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T17:08:06.295Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\RentEasy\\RentEasyAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -97,8 +127,7 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwDgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T17:04:48.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T17:04:48.832Z"
             }
           ]
         }
