@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using RentEasyAPI.Data;
 using RentEasyAPI.Exeptions;
+using RentEasyAPI.Middleware;
 using RentEasyAPI.Services;
 using Scalar.AspNetCore;
 using System.Reflection;
@@ -74,9 +75,13 @@ builder.Services.AddOpenApi();
 builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
+builder.Services.AddTransient<RequestLoggingMiddleware>();
+
 var app = builder.Build();
 
 app.UseExceptionHandler();
+
+app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.UseSwagger();
 app.UseSwaggerUI();
