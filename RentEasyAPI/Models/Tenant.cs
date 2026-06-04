@@ -17,11 +17,5 @@
         public Property? Property { get; set; }
 
         public ICollection<Ticket>? Tickets { get; set; }
-<<<<<<< HEAD
-=======
-
-        public byte[] PasswordHash { get; set; }
-        public byte[] PasswordSalt { get; set; }
->>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
     }
 }
