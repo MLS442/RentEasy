@@ -30,38 +30,10 @@ namespace RentEasyAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LandlordId"));
 
-<<<<<<< HEAD
-=======
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
->>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-=======
-                    b.Property<byte[]>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("PasswordSalt")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("RefreshToken")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("RefreshTokenExpiryTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
->>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
                     b.HasKey("LandlordId");
 
                     b.ToTable("Landlords");
@@ -169,7 +141,6 @@ namespace RentEasyAPI.Migrations
                     b.ToTable("Tickets");
                 });
 
-<<<<<<< HEAD
             modelBuilder.Entity("RentEasyAPI.Models.User", b =>
                 {
                     b.Property<int>("UserId")
@@ -215,8 +186,6 @@ namespace RentEasyAPI.Migrations
                     b.ToTable("Users");
                 });
 
-=======
->>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
             modelBuilder.Entity("RentEasyAPI.Models.Property", b =>
                 {
                     b.HasOne("RentEasyAPI.Models.Landlord", "Landlord")
@@ -250,7 +219,6 @@ namespace RentEasyAPI.Migrations
                     b.Navigation("Tenant");
                 });
 
-<<<<<<< HEAD
             modelBuilder.Entity("RentEasyAPI.Models.User", b =>
                 {
                     b.HasOne("RentEasyAPI.Models.Landlord", "Landlord")
@@ -266,8 +234,6 @@ namespace RentEasyAPI.Migrations
                     b.Navigation("Tenant");
                 });
 
-=======
->>>>>>> dd70261a832a6b9debdf33cc0cc3bf7464cfcc16
             modelBuilder.Entity("RentEasyAPI.Models.Landlord", b =>
                 {
                     b.Navigation("Properties");
