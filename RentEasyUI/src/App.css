@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 }
+
+/* --- Added for RentEasy Layout --- */
+
+.main-header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-menu a {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.content-container {
+  margin-top: 1rem;
+}
+
+.error-page {
+  color: #ff4d4d;
+  margin-top: 3rem;
+}
+

@@ -27,6 +27,12 @@ namespace RentEasyAPI.Data
                 .HasOne(u => u.Tenant)
                 .WithOne()
                 .HasForeignKey<User>(u => u.TenantId);
+
+            modelBuilder.Entity<Property>(entity =>
+            {
+                entity.Property(p => p.Price)
+                      .HasPrecision(18, 2);
+            });
         }
     }
 }
