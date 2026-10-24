@@ -9,47 +9,11 @@ import { Routes, Route, Link } from 'react-router-dom'
 function App() {
   const tenant = "Alex"
   const landLord = "Mohamed"
-  const [tickets, setTickets] = useState([])
   const [tenants, setTenants] = useState([])
   const [properties, setProperties] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
 
-  async function handleFixTicket(ticketToUpdate) {
-    const url = `https://localhost:7130/Tickets/${ticketToUpdate.ticketId}`
-    const updatedTicket = { ...ticketToUpdate, status: "Fixed" }
-    delete updatedTicket.tenant
-    try {
-      const response = await fetch(url, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedTicket)
-      })
-      if (!response.ok) throw new Error(`Response Status: ${response.status}`)
-      setTickets(tickets.map(t => t.ticketId === ticketToUpdate.ticketId ? { ...t, status: "Fixed" } : t))
-    } catch { console.error('failed') }
-  }
-
-  async function deleteTicket(id) {
-    const url = `https://localhost:7130/Tickets/${id}`
-    try {
-      const response = await fetch(url, { method: "DELETE" })
-      if (!response.ok) throw new Error(`Response Status: ${response.status}`)
-      setTickets(tickets.filter(t => t.ticketId != id))
-    } catch { console.error('failed') }
-  }
 
   useEffect(() => {
-    async function getMockTickets() {
-      const url = "https://localhost:7130/Tickets"
-      try {
-        const response = await fetch(url)
-        if (!response.ok) throw new Error(`Response Status: ${response.status}`)
-        const result = await response.json()
-        setTickets(result)
-      } catch { console.error('failed') } finally { setIsLoading(false) }
-    }
-    getMockTickets()
-
     async function getMockTenants() {
       const url = "https://localhost:7130/Tenants"
       try {
@@ -57,10 +21,14 @@ function App() {
         if (!response.ok) throw new Error(`Response Status: ${response.status}`)
         const result = await response.json()
         setTenants(result)
-      } catch { console.error('failed') } finally { setIsLoading(false) }
+      } catch {
+        console.error('failed')
+      }
     }
     getMockTenants()
+  }, []);
 
+  useEffect(() => {
     async function getMockProperties() {
       const url = "https://localhost:7130/Properties"
       try {
@@ -68,10 +36,13 @@ function App() {
         if (!response.ok) throw new Error(`Response Status: ${response.status}`)
         const result = await response.json()
         setProperties(result)
-      } catch { console.error('failed') } finally { setIsLoading(false) }
+      } catch {
+        console.error('failed')
+      }
     }
     getMockProperties()
   }, []);
+
 
   return (
     <>
@@ -84,34 +55,27 @@ function App() {
           <Link to="/tenant-dashboard">Tenant Dashboard</Link>
           <Link to="/landlord-dashboard">Landlord Dashboard</Link>
         </nav>
-        
+
       </header>
 
       <main className="content-container">
         <Routes>
-          
+
           <Route path="login" element={<Login />} />
 
           <Route path="register/:token" element={<Register />} />
 
           <Route path="tenant-dashboard" element={
-            <TenantDashboard 
+            <TenantDashboard
               name={tenant}
-              tickets={tickets}
-              setTickets={setTickets}
-              isLoading={isLoading} 
             />
           } />
 
           <Route path="landlord-dashboard" element={
-            <LandlordDashboard 
+            <LandlordDashboard
               name={landLord}
-              tickets={tickets}
               tenants={tenants}
               properties={properties}
-              handleFixTicket={handleFixTicket}
-              isLoading={isLoading}
-              deleteTicket={deleteTicket} 
             />
           } />
 
@@ -126,5 +90,6 @@ function App() {
     </>
   )
 }
+
 
 export default App

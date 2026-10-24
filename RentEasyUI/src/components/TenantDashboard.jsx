@@ -1,68 +1,60 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import TicketService from '../services/TicketService'
 
+export const TenantDashboard = ({ name }) => {
 
-export const TenantDashboard = ({ name, tickets, setTickets, isLoading }) => {
-
-
+    const [tickets, setTickets] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
     const [subject, setSubject] = useState('')
     const [description, setDescription] = useState('')
 
-    async function handleAddTicket() {
-        const url = "https://localhost:7130/Tickets"
+    useEffect(() => {
+        async function getTickets() {
+            try {
+                const response = await TicketService.getTickets()
+                if (!response.ok) throw new Error(`Response Status: ${response.status}`)
+                const result = await response.json()
+                setTickets(result)
+            } catch (error) {
+                console.error('Failed to fecth the tickets:', error)
+                alert("Could not load the tickets. Please try again.")
+            }
+            finally{
+                setIsLoading(false)
+            }
+        }
+        getTickets()
+    }, []);
 
+    async function createTicket() {
         if (subject === '' || description === '') {
             return alert("The fields should not be empty")
         }
 
         const newTicket = {
-            tenantId: 1,
+            //tenantId: 1,
             subject: subject,
             description: description,
             status: "Not Fixed"
         }
 
         try {
-            const response = await fetch(url, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(newTicket)
-            })
+            const response = await TicketService.postTicket(newTicket)
 
-            if (!response.ok) {
-                throw new Error(`Response Status: ${response.status}`)
-            }
+            if (!response.ok) throw new Error(`Response Status: ${response.status}`)
 
             const savedTicket = await response.json()
+
             setTickets([...tickets, savedTicket])
             setSubject('')
             setDescription('')
             //console.log(result)
-
         }
-        catch {
-            console.error('failed')
+        catch (error) {
+            console.error('Failed to create ticket', error)
+            alert("Could not create ticket. Please try again.")
         }
-
-
     }
-
-    /*Fetching mockData: This method do not change the data in the state. It 
-    prevents data loss if the user write while the mock data is being fetched.
-    useEffect(() => {
-
-        const timer = setTimeout(() => {
-            setTickets(prev => [...prev, ...mockData])
-        }, 7000)
-
-       return () => {
-        clearTimeout(timer)
-       }
-    },[]);*/
-
-    /*this verify if the value of isLoading,
-    if its true, it will always show the loading spinner*/
 
     if (isLoading) {
         return (
@@ -71,7 +63,6 @@ export const TenantDashboard = ({ name, tickets, setTickets, isLoading }) => {
             </div>
         )
     }
-
 
     return (
         <>
@@ -87,8 +78,6 @@ export const TenantDashboard = ({ name, tickets, setTickets, isLoading }) => {
                     placeholder='subject'
                 /> <br />
 
-
-
                 <input
                     type="text"
                     value={description}
@@ -97,12 +86,11 @@ export const TenantDashboard = ({ name, tickets, setTickets, isLoading }) => {
                 />
             </div> <br />
 
-            <button onClick={handleAddTicket}>Report</button> <br />
+            <button onClick={createTicket}>Report</button> <br />
 
             <ul>
                 {tickets.map(t => (<li key={t.ticketId}>
                     {t.ticketId},
-                    {t.tenantId},
                     {t.subject},
                     {t.description},
                     {t.status}

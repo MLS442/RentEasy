@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RentEasyAPI.Data;
 using RentEasyAPI.Models;
+using RentEasyAPI.Responses;
 using RentEasyAPI.Services;
 using System.Collections;
 using System.Runtime.InteropServices;
+using System.Security.Claims;
 
 namespace RentEasyAPI.Controllers
 {
@@ -19,18 +22,35 @@ namespace RentEasyAPI.Controllers
             _ticketService = ticketService;
         }
 
+        [Authorize]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Ticket>>> GetTickets()
+        public async Task<ActionResult<IEnumerable<TicketResponse>>> GetTickets()
         {
-            var ticktets = await _ticketService.GetTickets();
+            var role = User.FindFirstValue(ClaimTypes.Role);
+            int? tenantId = null;
+            
+            if(role == "Tenant")
+            {
+                tenantId = int.Parse(User.FindFirstValue("TenantId"));
+            }
+
+            var ticktets = await _ticketService.GetTickets(role, tenantId);
+
             return Ok(ticktets);
+
+            //var ticktets = await _ticketService.GetTickets();
+            //return Ok(ticktets);
         }
 
+       [Authorize(Roles = "Tenant")]
        [HttpPost]
 
-        public async Task<ActionResult<Ticket>> PostTicket(Ticket newTicket)
+        public async Task<ActionResult<TicketResponse>> PostTicket(Ticket newTicket)
         {
+            newTicket.TenantId = int.Parse(User.FindFirstValue("TenantId"));
+
             var createdTicket = await _ticketService.PostTicket(newTicket);
+
             return Ok(createdTicket);
         }
 

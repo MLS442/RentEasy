@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using RentEasyAPI.DTOs;
 using RentEasyAPI.Models;
+using RentEasyAPI.Responses;
 
 namespace RentEasyAPI.Mappings
 {

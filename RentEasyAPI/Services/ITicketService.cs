@@ -1,11 +1,12 @@
 ﻿using RentEasyAPI.Models;
+using RentEasyAPI.Responses;
 
 namespace RentEasyAPI.Services
 {
     public interface ITicketService
     {
-        Task<IEnumerable<Ticket>> GetTickets();
-        Task<Ticket> PostTicket(Ticket newTicket);
+        Task<IEnumerable<TicketResponse>> GetTickets(string role, int? tenantId);
+        Task<TicketResponse> PostTicket(Ticket newTicket);
         Task<bool> PutTicket(int id, Ticket updatedTicket);
         Task<bool> DeleteTicket(int id);
     }

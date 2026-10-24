@@ -159,6 +159,11 @@ namespace RentEasyAPI.Services
                 new Claim(ClaimTypes.Role, user.Role)
             };
 
+            if (user.Role == "Tenant")
+            {
+                claims.Add(new Claim("TenantId", user.Tenant.TenantId.ToString()));
+            }
+
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_configuration.GetValue<string>("AppSettings:Token")!));
 
