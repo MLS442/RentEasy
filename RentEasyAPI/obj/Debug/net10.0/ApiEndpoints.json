@@ -199,7 +199,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[RentEasyAPI.Models.Ticket, RentEasyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RentEasyAPI.Responses.TicketResponse, RentEasyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -225,7 +225,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "RentEasyAPI.Models.Ticket",
+        "Type": "RentEasyAPI.Responses.TicketResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -360,7 +360,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Ticket"
+                    "$ref": "#/components/schemas/TicketResponse"
                   }
                 }
               },
@@ -368,7 +368,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Ticket"
+                    "$ref": "#/components/schemas/TicketResponse"
                   }
                 }
               },
@@ -376,7 +376,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Ticket"
+                    "$ref": "#/components/schemas/TicketResponse"
                   }
                 }
               }
@@ -413,17 +413,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Ticket"
+                  "$ref": "#/components/schemas/TicketResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Ticket"
+                  "$ref": "#/components/schemas/TicketResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Ticket"
+                  "$ref": "#/components/schemas/TicketResponse"
                 }
               }
             }
@@ -628,10 +628,43 @@
         },
         "additionalProperties": false
       },
+      "TicketResponse": {
+        "required": [
+          "description",
+          "status",
+          "subject",
+          "tenantFullName"
+        ],
+        "type": "object",
+        "properties": {
+          "ticketId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subject": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenantFullName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "TokenResponse": {
         "required": [
           "accessToken",
-          "refreshToken"
+          "refreshToken",
+          "user"
         ],
         "type": "object",
         "properties": {
@@ -642,6 +675,9 @@
           "refreshToken": {
             "type": "string",
             "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/UserResponse"
           }
         },
         "additionalProperties": false
@@ -704,6 +740,38 @@
           "role": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserResponse": {
+        "required": [
+          "email",
+          "fullName",
+          "role"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenantId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false

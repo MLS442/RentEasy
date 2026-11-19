@@ -157,10 +157,10 @@ C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\staticwebassets.development.json
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\swae.build.ex.cache
-C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\RentEasy.B49C0123.Up2Date
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\RentEasyAPI.dll
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\refint\RentEasyAPI.dll
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\RentEasyAPI.pdb
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\RentEasyAPI.genruntimeconfig.cache
 C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\ref\RentEasyAPI.dll
+C:\RentEasy\RentEasyAPI\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

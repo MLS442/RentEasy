@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RNHjfouW8+I=",
+  "dgSpecHash": "EdENkHfiNv0=",
   "success": true,
   "projectFilePath": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
   "expectedPackageFiles": [
@@ -62,5 +62,30 @@
     "C:\\Users\\user\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.4\\system.security.cryptography.pkcs.9.0.4.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.4\\system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Pkcs' 9.0.4 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-2fmv-rv2c-59x7",
+      "projectPath": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
+      "libraryId": "System.Security.Cryptography.Pkcs",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Pkcs' 9.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-846f-f764-76mx",
+      "projectPath": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\RentEasy\\RentEasyAPI\\RentEasyAPI.csproj",
+      "libraryId": "System.Security.Cryptography.Pkcs",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

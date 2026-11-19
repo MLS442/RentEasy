@@ -84,10 +84,33 @@ namespace RentEasyAPI.Services
 
         private async Task<TokenResponse> CreateTokenResponse(User user)
         {
+            string fullName;
+
+            if (user.Role == "Landlord")
+            {
+                fullName = user.Landlord!.FullName;
+            }
+            else if (user.Role == "Tenant")
+            {
+                fullName = user.Tenant!.FullName;
+            }
+            else
+            {
+                throw new InvalidOperationException($"Unsupported user role: {user.Role}");
+            }
+
             return new TokenResponse
             {
                 AccessToken = CreateToken(user),
-                RefreshToken = await GenerateAndSaveRefreshToken(user)
+                RefreshToken = await GenerateAndSaveRefreshToken(user),
+                User = new UserResponse
+                {
+                    UserId = user.UserId,
+                    Email = user.Email,
+                    Role = user.Role,
+                    FullName = fullName,
+                    TenantId = user.TenantId // Already null if Landlord
+                }
             };
         }
 
